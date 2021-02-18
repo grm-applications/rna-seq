@@ -1,0 +1,1 @@
+rm -r salmon_0.99.0_beta2_OSX_10.14.5
