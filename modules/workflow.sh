@@ -1,5 +1,4 @@
 
-#!/bin/bash
 
 # Downloading Data from SRA
 

@@ -1,5 +1,4 @@
 
-#!/bin/bash
 
 mkdir "Reference"
 cd "Reference"

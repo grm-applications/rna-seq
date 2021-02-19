@@ -1,6 +1,4 @@
-#!/bin/bash
 
-#!/bin/bash
 cd ..
 cd FASTQ
 for dir in *;

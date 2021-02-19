@@ -1,5 +1,4 @@
 
-#!/bin/bash
 cd ..
 mkdir 'Quality Control'
 cd FASTQ
