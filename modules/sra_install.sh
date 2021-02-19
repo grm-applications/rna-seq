@@ -1,4 +1,12 @@
 
-wget https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.10.9/sratoolkit.2.10.9-mac64.tar.gz 
-tar -xzvf sratoolkit.2.10.9-mac64.tar.gz
-rm sratoolkit.2.10.9-mac64.tar.gz
+# if [ `uname` == "Darwin" ]; then
+# 	echo "Operating System is macOS"
+# 	wget http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/current/sratoolkit.current-mac64.tar.gz
+# 	tar -xzvf sratoolkit.current-mac64.tar.gz
+# 	rm sratoolkit.current-mac64.tar.gz
+# elif [ `uname` == "Linux" ]; then
+	echo "Operting System is Linux"
+	wget http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/current/sratoolkit.current-centos_linux64.tar.gz
+	tar -xzvf sratoolkit.current-centos_linux64.tar.gz
+	rm sratoolkit.current-centos_linux64.tar.gz
+# fi
