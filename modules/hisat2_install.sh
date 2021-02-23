@@ -8,4 +8,3 @@ elif [ `uname` == "Linux" ]; then
 	unzip download &&
 	rm download
 fi
-
