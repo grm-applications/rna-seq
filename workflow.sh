@@ -15,11 +15,11 @@ cd modules &&
 #Salmon
 # ./salmon_install.sh &&
 # ./salmon_download_reference.sh &&
-# ./salmon_index_reference.sh &&
+# ./salmon_index_reference.sh 
 # ./salmon_run.sh &&
 
 #HISAT2
-./hisat2_install.sh &&
-./hisat2_download_reference.sh &&
-./hisat2_index_reference.sh
+# ./hisat2_install.sh &&
+# ./hisat2_download_reference.sh &&
+# ./hisat2_index_reference.sh
 # ./hisat2_run.sh &&

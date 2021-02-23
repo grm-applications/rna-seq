@@ -4,4 +4,10 @@ cd ..
 url=$(<reference.txt)
 mkdir Reference
 cd Reference
-wget ${url}
+wget ${url} &&
+filename=""
+for file in *;
+do
+	filename=${file}
+done
+gunzip ${filename}
