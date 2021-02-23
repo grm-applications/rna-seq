@@ -21,5 +21,5 @@ cd modules &&
 #HISAT2
 ./hisat2_install.sh &&
 ./hisat2_download_reference.sh &&
-./hisat2_index_reference.sh &&
+./hisat2_index_reference.sh
 # ./hisat2_run.sh &&
