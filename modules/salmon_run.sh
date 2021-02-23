@@ -19,7 +19,7 @@ elif [ `uname` == "Linux" ]; then
 	do
 		echo "Processing sample ${dir}"
 		cd ${dir}
-			../../modules/salmon-latest_linux_x86_64/bin/salmon quant -i ../../Reference/athal_index -l A -1 ${dir}_1.fastq -2 ${dir}_2.fastq -p 8 --validateMappings -o ../../Salmon/${dir}
+			../../modules/salmon_0.99.0_beta2_linux_x86_64/bin/salmon quant -i ../../Reference/athal_index -l A -1 ${dir}_1.fastq -2 ${dir}_2.fastq -p 8 --validateMappings -o ../../Salmon/${dir}
 		cd ..
 
 	done
