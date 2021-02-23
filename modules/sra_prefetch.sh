@@ -8,4 +8,3 @@ elif [ `uname` == "Linux" ]; then
 	cd bin
 	./prefetch --option-file ../../../accession_list.txt -O ../../../FASTQ/
 fi
-
