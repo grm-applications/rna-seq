@@ -1,4 +1,4 @@
-
+cd ..
 cd ..
 cd Reference
 filename=""
@@ -11,4 +11,4 @@ mkdir ${filename}_index
 cd ..
 cd modules
 
-./hisat2-2.2.1/hisat2-build -p 7 ../Reference/${filename} ../Reference/${filename}_index/index
+./HISAT2/hisat2-2.2.1/hisat2-build -p 7 ../Reference/${filename} ../Reference/${filename}_index/index

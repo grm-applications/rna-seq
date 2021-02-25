@@ -1,5 +1,5 @@
 
-
+cd ..
 cd ..
 url=$(<reference.txt)
 mkdir Reference

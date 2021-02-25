@@ -1,5 +1,6 @@
 
 cd ..
+cd ..
 mkdir 'Quality Control'
 cd FASTQ
 
@@ -8,7 +9,7 @@ do
 	cd $dir
 	for file in *.fastq
 	do
-		../../modules/FastQC/fastqc -o ../../'Quality Control' $file
+		../../modules/FastQC/FastQC/fastqc -o ../../'Quality Control' $file
 	done
 	cd ..
 done
