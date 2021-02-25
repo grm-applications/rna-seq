@@ -1,4 +1,0 @@
-
-DRR016125	cond_A_rep1	A_rep1_left.fq	A_rep1_right.fq
-DRR016126
-

@@ -14,11 +14,11 @@ cd modules
 ./configure_permissions.sh
 
 # Sequence Read Archive
-# cd SRA
-# ./sra_install.sh
-# ./sra_prefetch.sh
-# ./sra_fastq_dump.sh
-# cd ..
+cd SRA
+./sra_install.sh
+./sra_prefetch.sh
+./sra_fastq_dump.sh
+cd ..
 
 # Quality Control
 # cd FastQC
