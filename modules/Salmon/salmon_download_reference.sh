@@ -1,6 +1,4 @@
 
-cd ..
-cd ..
 url=$(<reference.txt)
 mkdir Reference
 cd Reference
@@ -11,3 +9,4 @@ do
 	filename=${file}
 done
 gunzip ${filename}
+cd ..

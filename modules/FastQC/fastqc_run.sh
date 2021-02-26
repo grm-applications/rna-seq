@@ -1,15 +1,17 @@
 
-cd ..
-cd ..
 mkdir 'Quality Control'
 cd FASTQ
-
 for dir in *
-do 
+do
 	cd $dir
 	for file in *.fastq
 	do
-		../../modules/FastQC/FastQC/fastqc -o ../../'Quality Control' $file
+		if [ `uname` == "Darwin" ]; then
+			../../modules/FastQC/FastQC/fastqc -o ../../'Quality Control' $file
+		elif [ `uname` == "Linux" ]; then
+			fastqc -o ../../'Quality Control' $file
+		fi
 	done
 	cd ..
 done
+cd ..

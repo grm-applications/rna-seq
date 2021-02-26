@@ -1,38 +1,25 @@
 
+cd FASTQ
+for dir in */
+do
+	cd $dir
+		for file in *
+		do
+			if [[ $file == *".sra"* ]]
+			then
+				if [ `uname` == "Darwin" ]; then
+					../../modules/SRA/sratoolkit.2.10.9-mac64/bin/fasterq-dump --split-files $file
+				elif [ `uname` == "Linux" ]; then
+					fasterq-dump --split-files $file
+				fi
+				rm -r $file
+			fi
+		done
+	cd ..
+done
+cd ..
 
-if [ `uname` == "Darwin" ]; then
-	cd ..
-	cd ..
-	cd FASTQ
-	for dir in *
-	do
-		cd $dir
-		for file in *
-		do
-			if [[ $file == *".sra"* ]]
-			then
-				../../modules/SRA/sratoolkit.2.10.9-mac64/bin/fasterq-dump --split-files $file
-			fi
-		done
-		cd ..
-	done
-elif [ `uname` == "Linux" ]; then
-	cd ..
-	cd ..
-	cd FASTQ
-	for dir in *
-	do
-		cd $dir
-		for file in *
-		do
-			if [[ $file == *".sra"* ]]
-			then
-				fasterq-dump --split-files $file
-			fi
-		done
-		cd ..
-	done
-fi
+
 
 
 
