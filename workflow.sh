@@ -1,21 +1,32 @@
 
 #!/bin/sh
 #Grid Engine Options
-#$ -N rna_seq_george_moore
+#$ -N rna_seq
 #$ -cwd
 
 if [ `uname` == "Linux" ];then
 	. /etc/profile.d/modules.sh
 	module load python/3.4.3
+	module load igmm/apps/R/4.0.3
+	module load igmm/apps/FastQC/0.11.9
+	module load igmm/apps/HISAT2/2.1.0
+	module load igmm/apps/salmon/1.3.0
+	module load igmm/apps/node/10.16.3
+	module load igmm/apps/sratoolkit/2.10.8
+	cd modules
+	./configure_permissions.sh
+elif [ `uname` == "Darwin" ];then
+	cd modules
+	cd SRA && ./sra_install.sh && cd ..
+	cd FastQC && ./fastqc_install.sh &&cd ..
+	cd Trinity && ./trinity_install.sh && cd ..
+	cd Salmon && ./salmon_install.sh && cd ..
+	cd HISAT2 && ./hisat2_install.sh && cd ..
+	./configure_permissions.sh
 fi
-
-#Configure File Permissions
-cd modules
-./configure_permissions.sh
 
 # Sequence Read Archive
 cd SRA
-./sra_install.sh
 ./sra_prefetch.sh
 ./sra_fastq_dump.sh
 cd ..
