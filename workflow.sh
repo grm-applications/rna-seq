@@ -13,7 +13,6 @@ if [ `uname` == "Linux" ];then
 	module load igmm/apps/salmon/1.3.0
 	module load igmm/apps/sratoolkit/2.10.8
 	module load igmm/apps/Trinity/2.8.3
-	./modules/configure_permissions.sh
 elif [ `uname` == "Darwin" ];then
 	cd modules
 	cd SRA && ./sra_install.sh && cd ..
@@ -21,7 +20,6 @@ elif [ `uname` == "Darwin" ];then
 	cd Trinity && ./trinity_install.sh && cd ..
 	cd Salmon && ./salmon_install.sh && cd ..
 	cd HISAT2 && ./hisat2_install.sh && cd ..
-	./configure_permissions.sh
 	cd ..
 fi
 
