@@ -12,7 +12,6 @@ do
 				elif [ `uname` == "Linux" ]; then
 					fasterq-dump --split-files $file
 				fi
-				rm -r $file
 			fi
 		done
 	cd ..
