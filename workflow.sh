@@ -15,11 +15,11 @@ if [ `uname` == "Linux" ];then
 	module load igmm/apps/Trinity/2.8.3
 elif [ `uname` == "Darwin" ];then
 	cd modules
-	cd SRA && ./sra_install.sh && cd ..
-	cd FastQC && ./fastqc_install.sh &&cd ..
-	cd Trinity && ./trinity_install.sh && cd ..
-	cd Salmon && ./salmon_install.sh && cd ..
-	cd HISAT2 && ./hisat2_install.sh && cd ..
+	# cd SRA && ./sra_install.sh && cd ..
+	# cd FastQC && ./fastqc_install.sh &&cd ..
+	# cd Trinity && ./trinity_install.sh && cd ..
+	# cd Salmon && ./salmon_install.sh && cd ..
+	# cd HISAT2 && ./hisat2_install.sh && cd ..
 	cd ..
 fi
 
