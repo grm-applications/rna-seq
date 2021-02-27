@@ -8,9 +8,9 @@ do
 			if [[ $file == *".sra"* ]]
 			then	
 				if [ `uname` == "Darwin" ]; then
-					../../modules/SRA/sratoolkit.2.10.9-mac64/bin/fasterq-dump --split-files $base
+					../../modules/SRA/sratoolkit.2.10.9-mac64/bin/fasterq-dump --split-files $file
 				elif [ `uname` == "Linux" ]; then
-					fastq-dump --split-files $base
+					fastq-dump --split-files $file
 				fi
 			fi
 		done
