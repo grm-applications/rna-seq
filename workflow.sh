@@ -15,24 +15,24 @@ if [ `uname` == "Linux" ];then
 	module load igmm/apps/Trinity/2.8.3
 elif [ `uname` == "Darwin" ];then
 	cd modules
-	# cd SRA && ./sra_install.sh && cd ..
-	# cd FastQC && ./fastqc_install.sh &&cd ..
-	# cd Trinity && ./trinity_install.sh && cd ..
-	# cd Salmon && ./salmon_install.sh && cd ..
-	# cd HISAT2 && ./hisat2_install.sh && cd ..
+	cd SRA && ./sra_install.sh && cd ..
+	cd FastQC && ./fastqc_install.sh &&cd ..
+	cd Trinity && ./trinity_install.sh && cd ..
+	cd Salmon && ./salmon_install.sh && cd ..
+	cd HISAT2 && ./hisat2_install.sh && cd ..
 	cd ..
 fi
 
 ./modules/SRA/sra_prefetch.sh
 ./modules/SRA/sra_fastq_dump.sh
-# ./modules/FastQC/fastqc_run.sh
+./modules/FastQC/fastqc_run.sh
 # ./modules/Salmon/salmon_download_reference.sh
 # ./modules/Salmon/salmon_index_reference.sh
 # ./modules/Salmon/salmon_run.sh
 
-# ./modules/Trinity/trinity_run.sh
 # python ./modules/Trinity/trinity_sample_file.py
 # ./modules/Trinity/trinity_rearrange_files.sh
+
 # ./modules/Trinity/trinity_run.sh
 # Rscript ./modules/DESeq2/deseq2.R
 # ./hisat2_download_reference.sh
