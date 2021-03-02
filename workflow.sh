@@ -3,6 +3,7 @@
 #Grid Engine Options
 #$ -N rna_seq
 #$ -cwd
+#$ -l h_vmen=256G
 
 if [ `uname` == "Linux" ];then
 	. /etc/profile.d/modules.sh
@@ -34,7 +35,7 @@ fi
 python ./modules/Trinity/trinity_sample_file.py
 ./modules/Trinity/trinity_rearrange_files.sh
 ./modules/Trinity/trinity_run.sh
-./modules/Trinity/trinity_move_output
+./modules/Trinity/trinity_move_output.sh
 
 # Rscript ./modules/DESeq2/deseq2.R
 # ./hisat2_download_reference.sh
