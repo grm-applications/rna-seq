@@ -3,7 +3,7 @@
 #Grid Engine Options
 #$ -N rna_seq
 #$ -cwd
-#$ -l h_vmem=256G
+#$ -l h_vmem=64G
 
 if [ `uname` == "Linux" ];then
 	. /etc/profile.d/modules.sh
