@@ -29,9 +29,8 @@ fi
 # ./modules/Salmon/salmon_download_reference.sh
 # ./modules/Salmon/salmon_index_reference.sh
 # ./modules/Salmon/salmon_run.sh
-
 python ./modules/Trinity/trinity_sample_file.py
-./modules/Trinity/trinity_rearrange_files.sh
+# ./modules/Trinity/trinity_rearrange_files.sh
 # ./modules/Trinity/trinity_run.sh
 
 # Rscript ./modules/DESeq2/deseq2.R
