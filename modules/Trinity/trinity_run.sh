@@ -6,3 +6,6 @@ elif [ `uname` == "Linux" ]; then
 	Trinity --seqType fq --samples_file "trinity_sample_file.txt" --CPU 16 --max_memory 50G
 fi
 cd ..
+
+# Trinity --seqType fq --samples_file "trinity_sample_file.txt" --CPU 16 --max_memory 50G
+# --trimmomatic --normalize_by_read_set

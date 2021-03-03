@@ -1,47 +1,37 @@
 
-if (Sys.info()["sysname"] == "Darwin") {
-	if (!file.exists("./R_packages")) {
-		dir.create("./R_packages")
-		.libPaths("./R_packages")
-		install.packages("BiocManager", repos="http://cran.us.r-project.org", lib="./R_packages")
-		BiocManager::install("DESeq2", lib="./R_packages")
-	} else {
-		.libPaths("./R_packages")
-	}
-} else if (Sys.info()["sysname"] == "Linux") {
-	# install.packages("BiocManager")
-	# BiocManager::install("tximport")
+if(!file.exists("./R_packages")) {
+	dir.create("./R_packages")
+	.libPaths("./R_packages")
+	install.packages("BiocManager", repos="http://cran.us.r-project.org", lib="./R_packages")
+	library("BiocManager")
+	BiocManager::install("tximport", lib="./R_packages")
+	BiocManager::install("tximportData", lib="./R_packages")
+	BiocManager::install("readr", lib="./R_packages")
+} else {
+	.libPaths("./R_packages")
 }
-
 library("DESeq2")
 library("tximport")
-
-# dds
-
-
-# # dds <- DESeqDataSetFromMatrix(countData = cts, colData = coldata, design = ~ batch + condition)
-# # dds <- DESeq(dds)
-# # resultsNames(dds)
-# # res <- results(dds, name="condition_trt_vs_untrt")
-# # res <- lfcShrink(dds, coef="condition_trt_")
-
-# # samples <- as.matrix(read.table("quant.sf", header=FALSE))
-# # samples <- samples[-1]
-# # print(samples)
-
-# meta <- data.frame(sampletype = c("A", "B"))
-# print(meta)
-
-# condition <- factor(c("Name", "Length", "EffectiveLength", "TPM", "NumReads"))
-# dds <- DESeqDataSetFromMatrix(samples, DataFrame(condition), ~ condition)
-# print(dds)
+library("tximportData")
+library("readr")
 
 
-# names <- data.frame(samples$Name)
-# print(names[0])
 
-# dir <- system.file("extdata", package="tximportData")
-# samples <- read.table(file.path(dir,"samples.txt"), header=TRUE)
-# samples$condition <- factor(rep(c("A","B"),each=3))
-# rownames(samples) <- samples$run
-# samples[,c("pop","center","run","condition")]
+dir <- system.file("extdata", package="tximportData") #"/exports/eddie/scratch/s1724533/R_packages/tximportData/extdata"
+samples <- read.table(file.path(dir, "samples.txt"), header=TRUE) # Reads samples from "samples.txt"
+
+# samples$condition <- factor(rep(c("A", "B"), each=3)) #
+# rownames(samples) <- samples$run # Changes row indexes from numbers (e.g. 1) to sample name (e.g. ERR188297)
+# samples[,c("pop", "center", "run", "condition")] # Grabs specific columns
+
+files <- file.path(dir, "salmon", samples$run, "quant.sf")
+names(files) <- paste0("sample", 1:6)
+tx2gene <- read_csv(file.path(dir, "tx2gene.csv"))
+txi <- tximport(files, type="salmon", tx2gene=tx2gene)
+
+sampleTable <- data.frame(condition = factor(rep(c("A", "B"), each = 3)))
+rownames(sampleTable) <- colnames(txi$counts)
+dds <- DESeqDataSetFromTximport(txi, sampleTable, design = ~condition)
+dds <- DESeq(dds)
+res <- results(dds)
+plotMA(res, ylim=c(-2,2))

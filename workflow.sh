@@ -24,8 +24,9 @@ elif [ `uname` == "Darwin" ];then
 	cd ..
 fi
 
-# ./modules/SRA/sra_prefetch.sh
-# ./modules/SRA/sra_fastq_dump.sh
+./modules/SRA/sra_prefetch.sh
+./modules/SRA/sra_fastq_dump.sh
+
 # ./modules/FastQC/fastqc_run.sh
 
 # ./modules/Salmon/salmon_download_reference.sh
