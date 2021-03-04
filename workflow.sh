@@ -28,14 +28,14 @@ fi
 # ./modules/FastQC/fastqc_run.sh
 # ./modules/Salmon/salmon_download_reference.sh
 # ./modules/Salmon/salmon_index_reference.sh
-./modules/Salmon/salmon_run.sh
+# ./modules/Salmon/salmon_run.sh
 
 # python ./modules/Trinity/trinity_sample_file.py
 # ./modules/Trinity/trinity_rearrange_files.sh
 # ./modules/Trinity/trinity_run.sh
 # ./modules/Trinity/trinity_move_output.sh
 
-# Rscript ./modules/DESeq2/deseq2.R
+Rscript ./modules/DESeq2/deseq2.R
 # ./hisat2_download_reference.sh
 # ./hisat2_index_reference.sh
 # ./hisat2_run.sh
