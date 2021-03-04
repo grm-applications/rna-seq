@@ -8,5 +8,5 @@ for file in *;
 do
 	filename=${file}
 done
-gunzip ${filename}
+# gunzip ${filename}
 cd ..

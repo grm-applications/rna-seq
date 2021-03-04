@@ -1,1 +1,1 @@
-ftp://ftp.ensemblgenomes.org/pub/plants/release-28/fasta/arabidopsis_thaliana/cdna/Arabidopsis_thaliana.TAIR10.28.cdna.all.fa.gz
+https://sra-download.ncbi.nlm.nih.gov/traces/wgs03/wgs_aux/GG/KG/GGKG01/GGKG01.1.fsa_nt.gz
