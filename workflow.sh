@@ -6,7 +6,7 @@
 
 if [ `uname` == "Linux" ];then
 	. /etc/profile.d/modules.sh
-	module load igmm/apps/R/4.0.3
+	module load R
 	# module load igmm/apps/FastQC/0.11.9
 	# module load igmm/apps/HISAT2/2.1.0
 	module load igmm/apps/salmon/1.3.0

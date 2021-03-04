@@ -1,22 +1,26 @@
 
-if(!file.exists("./R_packages")) {
-	dir.create("./R_packages")
-	.libPaths("./R_packages")
-	install.packages("BiocManager", repos="http://cran.us.r-project.org", lib="./R_packages")
+if(!file.exists("./modules/DESeq2/R_packages")) {
+	dir.create("./modules/DESeq2/R_packages")
+	.libPaths("./modules/DESeq2/R_packages")
+	install.packages("BiocManager", repos="http://cran.us.r-project.org", lib="./modules/DESeq2/R_packages")
 	library("BiocManager")
-	BiocManager::install("tximport", lib="./R_packages")
-	BiocManager::install("tximportData", lib="./R_packages")
-	BiocManager::install("readr", lib="./R_packages")
+	BiocManager::install("tximport", lib="./modules/DESeq2/R_packages")
+	BiocManager::install("tximportData", lib="./modules/DESeq2/R_packages")
+	BiocManager::install("readr", lib="./modules/DESeq2/R_packages")
 } else {
-	.libPaths("./R_packages")
+	.libPaths("./modules/DESeq2/R_packages")
 }
 library("DESeq2")
 library("tximport")
 library("tximportData")
 library("readr")
 
-directory <- "../../Salmon/"
-files <- file.path(directory)
+directory <- "./Salmon/"
+samples <- readLines(system.file("accession_list.txt"))
+print(samples)
+
+
+# files <- file.path(directory)
 
 # dir <- system.file("extdata", package="tximportData") #"/exports/eddie/scratch/s1724533/R_packages/tximportData/extdata"
 # samples <- read.table(file.path(dir, "samples.txt"), header=TRUE) # Reads samples from "samples.txt"
