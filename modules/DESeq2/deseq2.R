@@ -16,6 +16,8 @@ library("tximportData")
 library("readr")
 
 
+directory <- "../../Salmon/"
+files <- file.path(directory,)
 
 dir <- system.file("extdata", package="tximportData") #"/exports/eddie/scratch/s1724533/R_packages/tximportData/extdata"
 samples <- read.table(file.path(dir, "samples.txt"), header=TRUE) # Reads samples from "samples.txt"
@@ -25,6 +27,8 @@ samples <- read.table(file.path(dir, "samples.txt"), header=TRUE) # Reads sample
 # samples[,c("pop", "center", "run", "condition")] # Grabs specific columns
 
 files <- file.path(dir, "salmon", samples$run, "quant.sf")
+
+
 names(files) <- paste0("sample", 1:6)
 tx2gene <- read_csv(file.path(dir, "tx2gene.csv"))
 txi <- tximport(files, type="salmon", tx2gene=tx2gene)
