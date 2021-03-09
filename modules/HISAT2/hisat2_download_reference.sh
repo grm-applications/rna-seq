@@ -1,7 +1,7 @@
 
-cd ..
-cd ..
+cd config
 url=$(<reference.txt)
+cd ..
 mkdir Reference
 cd Reference
 wget ${url} &&
