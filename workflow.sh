@@ -13,8 +13,6 @@ module load igmm/apps/sratoolkit/2.10.8
 # module load igmm/apps/HISAT2/2.1.0
 # module load igmm/apps/Trinity/2.8.3
 
-./modules/SRA/sra_prefetch.sh
-./modules/SRA/sra_fastq_dump.sh
 ./modules/SRA/sra_accessions.sh
 # ./modules/FastQC/fastqc_run.sh
 # python ./modules/Trinity/trinity_sample_file.py
