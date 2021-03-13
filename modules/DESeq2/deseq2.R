@@ -28,15 +28,17 @@ library("readr")
 # dds <- DESeq(dds)
 # res <- results(dds)
 
+txi <- tximport(files, type="salmon", txIn=TRUE, txOut=TRUE)
+
 # -- DESeq2 with tximportData --
-# dir <- system.file("extdata", package="tximportData")
-# tximport_samples <- read.table(file.path(dir, "samples.txt"), header=TRUE) # Reads samples from "samples.txt"
-# tximport_files <- file.path(dir, "salmon", tximport_samples$run, "quant.sf")
-# names(tximport_files) <- paste0(tximport_samples$run)
-# tx2gene <- read_csv(file.path(dir, "txt2gene.csv"))
-# tximport_txi <- tximport(tximport_files, type="salmon", tx2gene=tx2gene)
-# sampleTable <- data.frame(condition = factor(rep(c("A", "B"), each = 3)))
-# rownames(sampleTable) <- colnames(tximport_txi$counts)
-# dds <- DESeqDataSetFromTximport(tximport_txi, sampleTable, design=~condition)
-# dds <- DESeq(dds)
-# res <- results(dds)
+dir <- system.file("extdata", package="tximportData")
+tximport_samples <- read.table(file.path(dir, "samples.txt"), header=TRUE) # Reads samples from "samples.txt"
+tximport_files <- file.path(dir, "salmon", tximport_samples$run, "quant.sf")
+names(tximport_files) <- paste0(tximport_samples$run)
+tx2gene <- read_csv(file.path(dir, "txt2gene.csv"))
+tximport_txi <- tximport(tximport_files, type="salmon", tx2gene=tx2gene)
+sampleTable <- data.frame(condition = factor(rep(c("A", "B"), each = 3)))
+rownames(sampleTable) <- colnames(tximport_txi$counts)
+dds <- DESeqDataSetFromTximport(tximport_txi, sampleTable, design=~condition)
+dds <- DESeq(dds)
+res <- results(dds)
