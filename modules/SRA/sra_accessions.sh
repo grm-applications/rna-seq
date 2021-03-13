@@ -32,13 +32,13 @@ fastq-dump --defline-seq '@$sn[_$rn]/$ri' ./FASTQ/ERR019894 -O ./FASTQ/ERR019894
 # prefetch SRR10913943 -O ./FASTQ/
 # fastq-dump --defline-seq '@$sn[_$rn]/$ri' ./FASTQ/SRR10913943 -O ./FASTQ/SRR10913943/
 
-# prefetch SRR065067 -O ./FASTQ/
-# fastq-dump --defline-seq '@$sn[_$rn]/$ri' ./FASTQ/SRR065067 -O ./FASTQ/SRR065067/
+prefetch SRR065067 -O ./FASTQ/
+fastq-dump --defline-seq '@$sn[_$rn]/$ri' ./FASTQ/SRR065067 -O ./FASTQ/SRR065067/
 
 # Paired-end Accessions:
 
-prefetch SRR5894321 -O ./FASTQ/
-fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR5894321 -O ./FASTQ/SRR5894321/
+# prefetch SRR5894321 -O ./FASTQ/
+# fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR5894321 -O ./FASTQ/SRR5894321/
 
 # prefetch SRR534003 -O ./FASTQ/
 # fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR534003 -O ./FASTQ/SRR534003/
