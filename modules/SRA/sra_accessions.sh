@@ -8,6 +8,7 @@ for dir in */;do
 		fastq-dump --defline-seq '@$sn[_$rn]/$ri' ./$dir -O ./
 		rm -rf ${dir}.sra
 	cd ..
+done
 cd ..
 
 prefetch --option-file ./config/paired_accessions.txt -O ./FASTQ/
@@ -17,6 +18,7 @@ for dir in */;do
 		fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./$dir -O ./
 		rm -rf ${dir}.sra
 	cd ..
+done
 cd ..
 
 
