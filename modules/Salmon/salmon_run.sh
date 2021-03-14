@@ -12,9 +12,9 @@ do
 	echo "Processing sample ${dir}"
 	cd ${dir}
 		if [ -e ./${dir}_1.fastq ] && [ -e ./${dir}_1.fastq ]; then
-			salmon quant -i ../../Reference/${filename}/ -l A -1 ${dir}_1.fastq -2 ${dir}_2.fastq -p 8 --validateMappings -o ../../Salmon/${dir}
+			salmon quant -i ../../Reference/${filename}/ -l A -1 ${dir}_1.fastq -2 ${dir}_2.fastq -p 1 --validateMappings -o ../../Salmon/${dir}
 		elif [ -e ./${dir}.fastq ]; then
-			salmon quant -i ../../Reference/${filename}/ -l A -r ${dir}.fastq -p 8 --validateMappings -o ../../Salmon/${dir}
+			salmon quant -i ../../Reference/${filename}/ -l A -r ${dir}.fastq -p 1 --validateMappings -o ../../Salmon/${dir}
 		fi
 	cd ..
 done
