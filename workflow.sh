@@ -21,7 +21,7 @@ module load roslin/blast+/2.11.0
 # ./modules/Trinity/trinity_run.sh
 # ./modules/Trinity/trinity_move_output.sh
 ./modules/Salmon/salmon_download_reference.sh
-# ./modules/BLAST/blast_run.sh
+./modules/BLAST/blast_run.sh
 # ./modules/Salmon/salmon_index_reference.sh
 # ./modules/Salmon/salmon_run.sh
 # python ./modules/Python/create_accession_list.py
