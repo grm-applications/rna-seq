@@ -19,8 +19,8 @@ module load igmm/apps/sratoolkit/2.10.8
 # ./modules/Trinity/trinity_rearrange_files.sh
 # ./modules/Trinity/trinity_run.sh
 # ./modules/Trinity/trinity_move_output.sh
-./modules/Salmon/salmon_download_reference.sh
-./modules/Salmon/salmon_index_reference.sh
+# ./modules/Salmon/salmon_download_reference.sh
+# ./modules/Salmon/salmon_index_reference.sh
 ./modules/Salmon/salmon_run.sh
 # Rscript ./modules/DESeq2/deseq2.R
 
