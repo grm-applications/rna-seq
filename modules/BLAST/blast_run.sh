@@ -9,4 +9,4 @@ cd ..
 
 mkdir BLAST
 
-blastn -db nt -query ./Reference/${filename} -out ./BLAST/results.out -outfmt 0
+blastn -db nt -query ./Reference/${filename} -out ./BLAST/results.out -outfmt 0 -remote
