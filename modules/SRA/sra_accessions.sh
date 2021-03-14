@@ -69,8 +69,8 @@
 # prefetch SRR1343576 -O ./FASTQ/
 # fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR1343576 -O ./FASTQ/SRR1343576/
 
-# prefetch SRR350719 -O ./FASTQ/
-# fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR350719 -O ./FASTQ/SRR350719/
+prefetch SRR350719 -O ./FASTQ/
+fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR350719 -O ./FASTQ/SRR350719/
 
 # prefetch SRR2224505 -O ./FASTQ/
 # fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR2224505 -O ./FASTQ/SRR2224505/
