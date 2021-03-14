@@ -1,26 +1,26 @@
 
 # Single-end Accessions:
 
-prefetch ERR019888 -O ./FASTQ/
-fastq-dump --defline-seq '@$sn[_$rn]/$ri' ./FASTQ/ERR019888 -O ./FASTQ/ERR019888/
+# prefetch ERR019888 -O ./FASTQ/
+# fastq-dump --defline-seq '@$sn[_$rn]/$ri' ./FASTQ/ERR019888 -O ./FASTQ/ERR019888/
 
-prefetch ERR019889 -O ./FASTQ/
-fastq-dump --defline-seq '@$sn[_$rn]/$ri' ./FASTQ/ERR019889 -O ./FASTQ/ERR019889/
+# prefetch ERR019889 -O ./FASTQ/
+# fastq-dump --defline-seq '@$sn[_$rn]/$ri' ./FASTQ/ERR019889 -O ./FASTQ/ERR019889/
 
-prefetch ERR019890 -O ./FASTQ/
-fastq-dump --defline-seq '@$sn[_$rn]/$ri' ./FASTQ/ERR019890 -O ./FASTQ/ERR019890/
+# prefetch ERR019890 -O ./FASTQ/
+# fastq-dump --defline-seq '@$sn[_$rn]/$ri' ./FASTQ/ERR019890 -O ./FASTQ/ERR019890/
 
-prefetch ERR019891 -O ./FASTQ/
-fastq-dump --defline-seq '@$sn[_$rn]/$ri' ./FASTQ/ERR019891 -O ./FASTQ/ERR019891/
+# prefetch ERR019891 -O ./FASTQ/
+# fastq-dump --defline-seq '@$sn[_$rn]/$ri' ./FASTQ/ERR019891 -O ./FASTQ/ERR019891/
 
-prefetch ERR019892 -O ./FASTQ/
-fastq-dump --defline-seq '@$sn[_$rn]/$ri' ./FASTQ/ERR019892 -O ./FASTQ/ERR019892/
+# prefetch ERR019892 -O ./FASTQ/
+# fastq-dump --defline-seq '@$sn[_$rn]/$ri' ./FASTQ/ERR019892 -O ./FASTQ/ERR019892/
 
-prefetch ERR019893 -O ./FASTQ/
-fastq-dump --defline-seq '@$sn[_$rn]/$ri' ./FASTQ/ERR019893 -O ./FASTQ/ERR019893/
+# prefetch ERR019893 -O ./FASTQ/
+# fastq-dump --defline-seq '@$sn[_$rn]/$ri' ./FASTQ/ERR019893 -O ./FASTQ/ERR019893/
 
-prefetch ERR019894 -O ./FASTQ/
-fastq-dump --defline-seq '@$sn[_$rn]/$ri' ./FASTQ/ERR019894 -O ./FASTQ/ERR019894/
+# prefetch ERR019894 -O ./FASTQ/
+# fastq-dump --defline-seq '@$sn[_$rn]/$ri' ./FASTQ/ERR019894 -O ./FASTQ/ERR019894/
 
 # prefetch SRR1343578 -O ./FASTQ/
 # fastq-dump --defline-seq '@$sn[_$rn]/$ri' ./FASTQ/SRR1343578 -O ./FASTQ/SRR1343578/
@@ -159,11 +159,11 @@ fastq-dump --defline-seq '@$sn[_$rn]/$ri' ./FASTQ/ERR019894 -O ./FASTQ/ERR019894
 # prefetch SRR8648838 -O ./FASTQ/
 # fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR8648838 -O ./FASTQ/SRR8648838/
 
-# prefetch SRR8130348 -O ./FASTQ/
-# fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR8130348 -O ./FASTQ/SRR8130348/
+prefetch SRR8130348 -O ./FASTQ/
+fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR8130348 -O ./FASTQ/SRR8130348/
 
-# prefetch SRR8130349 -O ./FASTQ/
-# fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR8130349 -O ./FASTQ/SRR8130349/
+prefetch SRR8130349 -O ./FASTQ/
+fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR8130349 -O ./FASTQ/SRR8130349/
 
 # prefetch SRR8130350 -O ./FASTQ/
 # fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR8130350 -O ./FASTQ/SRR8130350/
