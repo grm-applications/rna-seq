@@ -17,9 +17,10 @@ for dir in *;do
 	cd $dir
 		if [ -e *.fastq ]; then
 			continue
+		else
+			fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files $dir -O ./
+			rm -rf ${dir}.sra
 		fi
-		fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files $dir -O ./
-		rm -rf ${dir}.sra
 	cd ..
 done
 cd ..
