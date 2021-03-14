@@ -1,29 +1,29 @@
 
 # Single-end Accessions:
 
-# prefetch --option-file ./config/single_accessions.txt -O ./FASTQ/
-# cd FASTQ
-# for dir in *;do
-# 	cd $dir
-# 		fastq-dump --defline-seq '@$sn[_$rn]/$ri' $dir -O ./
-# 		rm -rf ${dir}.sra
-# 	cd ..
-# done
-# cd ..
-
-prefetch --option-file ./config/paired_accessions.txt -O ./FASTQ/
+prefetch --option-file ./config/single_accessions.txt -O ./FASTQ/
 cd FASTQ
 for dir in *;do
 	cd $dir
-		if [ -e *.fastq ]; then
-			continue
-		else
-			fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files $dir -O ./
-			rm -rf ${dir}.sra
-		fi
+		fastq-dump --defline-seq '@$sn[_$rn]/$ri' $dir -O ./
+		rm -rf ${dir}.sra
 	cd ..
 done
 cd ..
+
+# prefetch --option-file ./config/paired_accessions.txt -O ./FASTQ/
+# cd FASTQ
+# for dir in *;do
+# 	cd $dir
+# 		if [ -e *.fastq ]; then
+# 			continue
+# 		else
+# 			fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files $dir -O ./
+# 			rm -rf ${dir}.sra
+# 		fi
+# 	cd ..
+# done
+# cd ..
 
 
 
