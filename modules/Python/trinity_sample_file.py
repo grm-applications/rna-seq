@@ -29,5 +29,5 @@ with open("./FASTQ/trinity_sample_file.txt", "w") as file:
 			file.write(accession + "\t" + accession + "_rep1" + "\t" + accession + "_1.fq" + "\t" + accession + "_2.fq")
 			file.write("\n")
 		elif accessions[accession] == "single":
-			file.write(accession + "\t" + accession + "_rep1" + "\t" + accession + "_1.fq")
+			file.write(accession + "\t" + accession + "_rep1" + "\t" + accession + ".fq")
 			file.write("\n")

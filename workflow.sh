@@ -13,15 +13,16 @@ module load igmm/apps/sratoolkit/2.10.8
 # module load igmm/apps/HISAT2/2.1.0
 # module load igmm/apps/Trinity/2.8.3
 
-# ./modules/SRA/sra_accessions.sh
+python ./modules/Python/format_accessions.py
+./modules/SRA/sra_accessions.sh
 # ./modules/FastQC/fastqc_run.sh
-# python ./modules/Trinity/trinity_sample_file.py
+# python ./modules/Python/trinity_sample_file.py
 # ./modules/Trinity/trinity_rearrange_files.sh
 # ./modules/Trinity/trinity_run.sh
 # ./modules/Trinity/trinity_move_output.sh
 # ./modules/Salmon/salmon_download_reference.sh
 # ./modules/Salmon/salmon_index_reference.sh
-./modules/Salmon/salmon_run.sh
+# ./modules/Salmon/salmon_run.sh
 # Rscript ./modules/DESeq2/deseq2.R
 
 # ./hisat2_download_reference.sh
