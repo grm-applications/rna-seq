@@ -3,7 +3,7 @@ cd Reference
 filename=""
 for folder in */;
 do
-	filename=${folder}
+	filename=${folder%/}
 done
 cd ..
 cd FASTQ
