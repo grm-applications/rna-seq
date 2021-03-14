@@ -30,17 +30,17 @@ dds <- DESeq(dds)
 res <- results(dds)
 
 #Look at the Results Table:
-head(results(dds, tidy=TRUE))
+# head(results(dds, tidy=TRUE))
 
 #Summary of differential gene expression:
-summary(res)
+# summary(res)
 
 
 
 
 #Annotation:
 
-txdb <- makeTxDbFromGFF(gtf_file)
+# txdb <- makeTxDbFromGFF(gtf_file)
 
 
 
