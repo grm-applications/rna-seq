@@ -15,6 +15,9 @@ prefetch --option-file ./config/paired_accessions.txt -O ./FASTQ/
 cd FASTQ
 for dir in *;do
 	cd $dir
+		if [ -e *.fastq ]; then
+			continue
+		fi
 		fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files $dir -O ./
 		rm -rf ${dir}.sra
 	cd ..
