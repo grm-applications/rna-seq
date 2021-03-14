@@ -1,52 +1,26 @@
 
 # Single-end Accessions:
 
-prefetch --option-file ./config/single_accessions.txt -O ./FASTQ/
-cd FASTQ
-for dir in *;do
-	cd $dir
-		fastq-dump --defline-seq '@$sn[_$rn]/$ri' $dir -O ./
-		rm -rf ${dir}.sra
-	cd ..
-done
-cd ..
+prefetch ERR019888 -O ./FASTQ/
+fastq-dump --defline-seq '@$sn[_$rn]/$ri' ./FASTQ/ERR019888 -O ./FASTQ/ERR019888/
 
-# prefetch --option-file ./config/paired_accessions.txt -O ./FASTQ/
-# cd FASTQ
-# for dir in *;do
-# 	cd $dir
-# 		if [ -e *.fastq ]; then
-# 			continue
-# 		else
-# 			fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files $dir -O ./
-# 			rm -rf ${dir}.sra
-# 		fi
-# 	cd ..
-# done
-# cd ..
+prefetch ERR019889 -O ./FASTQ/
+fastq-dump --defline-seq '@$sn[_$rn]/$ri' ./FASTQ/ERR019889 -O ./FASTQ/ERR019889/
 
+prefetch ERR019890 -O ./FASTQ/
+fastq-dump --defline-seq '@$sn[_$rn]/$ri' ./FASTQ/ERR019890 -O ./FASTQ/ERR019890/
 
+prefetch ERR019891 -O ./FASTQ/
+fastq-dump --defline-seq '@$sn[_$rn]/$ri' ./FASTQ/ERR019891 -O ./FASTQ/ERR019891/
 
-# prefetch ERR019888 -O ./FASTQ/
-# fastq-dump --defline-seq '@$sn[_$rn]/$ri' ./FASTQ/ERR019888 -O ./FASTQ/ERR019888/
+prefetch ERR019892 -O ./FASTQ/
+fastq-dump --defline-seq '@$sn[_$rn]/$ri' ./FASTQ/ERR019892 -O ./FASTQ/ERR019892/
 
-# prefetch ERR019889 -O ./FASTQ/
-# fastq-dump --defline-seq '@$sn[_$rn]/$ri' ./FASTQ/ERR019889 -O ./FASTQ/ERR019889/
+prefetch ERR019893 -O ./FASTQ/
+fastq-dump --defline-seq '@$sn[_$rn]/$ri' ./FASTQ/ERR019893 -O ./FASTQ/ERR019893/
 
-# prefetch ERR019890 -O ./FASTQ/
-# fastq-dump --defline-seq '@$sn[_$rn]/$ri' ./FASTQ/ERR019890 -O ./FASTQ/ERR019890/
-
-# prefetch ERR019891 -O ./FASTQ/
-# fastq-dump --defline-seq '@$sn[_$rn]/$ri' ./FASTQ/ERR019891 -O ./FASTQ/ERR019891/
-
-# prefetch ERR019892 -O ./FASTQ/
-# fastq-dump --defline-seq '@$sn[_$rn]/$ri' ./FASTQ/ERR019892 -O ./FASTQ/ERR019892/
-
-# prefetch ERR019893 -O ./FASTQ/
-# fastq-dump --defline-seq '@$sn[_$rn]/$ri' ./FASTQ/ERR019893 -O ./FASTQ/ERR019893/
-
-# prefetch ERR019894 -O ./FASTQ/
-# fastq-dump --defline-seq '@$sn[_$rn]/$ri' ./FASTQ/ERR019894 -O ./FASTQ/ERR019894/
+prefetch ERR019894 -O ./FASTQ/
+fastq-dump --defline-seq '@$sn[_$rn]/$ri' ./FASTQ/ERR019894 -O ./FASTQ/ERR019894/
 
 # prefetch SRR1343578 -O ./FASTQ/
 # fastq-dump --defline-seq '@$sn[_$rn]/$ri' ./FASTQ/SRR1343578 -O ./FASTQ/SRR1343578/
@@ -80,8 +54,8 @@ cd ..
 # prefetch SRR1339465 -O ./FASTQ/
 # fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR1339465 -O ./FASTQ/SRR1339465/
 
-# prefetch SRR1343572 -O ./FASTQ/
-# fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR1343572 -O ./FASTQ/SRR1343572/
+prefetch SRR1343572 -O ./FASTQ/
+fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR1343572 -O ./FASTQ/SRR1343572/
 
 # prefetch SRR1339474 -O ./FASTQ/
 # fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR1339474 -O ./FASTQ/SRR1339474/
@@ -92,8 +66,8 @@ cd ..
 # prefetch SRR1339487 -O ./FASTQ/
 # fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR1339487 -O ./FASTQ/SRR1339487/
 
-# prefetch SRR1343576 -O ./FASTQ/
-# fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR1343576 -O ./FASTQ/SRR1343576/
+prefetch SRR1343576 -O ./FASTQ/
+fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR1343576 -O ./FASTQ/SRR1343576/
 
 # prefetch SRR350719 -O ./FASTQ/
 # fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR350719 -O ./FASTQ/SRR350719/
