@@ -7,6 +7,7 @@ if(!file.exists("./modules/DESeq2/R_packages")) {
 	BiocManager::install("tximport", lib="./modules/DESeq2/R_packages")
 	BiocManager::install("tximportData", lib="./modules/DESeq2/R_packages")
 	BiocManager::install("readr", lib="./modules/DESeq2/R_packages")
+	BiocManager::install("GenomicFeatures", lib="./modules/DESeq2/R_packages")
 } else {
 	.libPaths("./modules/DESeq2/R_packages")
 }
@@ -14,6 +15,7 @@ library("DESeq2")
 library("tximport")
 library("tximportData")
 library("readr")
+library("GenomicFeatures")
 
 # -- DESeq2 --
 samples <- read.table(file.path("./config/accessions.txt"))
@@ -26,6 +28,22 @@ rownames(sampleTable) <- conditions$V1
 dds <- DESeqDataSetFromTximport(txi, sampleTable, design=~condition)
 dds <- DESeq(dds)
 res <- results(dds)
+
+#Look at the Results Table:
+head(results(dds, tidy=TRUE))
+
+#Summary of differential gene expression:
+summary(res)
+
+
+
+
+#Annotation:
+
+txdb <- makeTxDbFromGFF(gtf_file)
+
+
+
 
 # -- DESeq2 with tximportData --
 # dir <- system.file("extdata", package="tximportData")

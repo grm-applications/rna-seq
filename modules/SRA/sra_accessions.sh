@@ -54,8 +54,9 @@ fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR1339464 -O ./
 prefetch SRR1339465 -O ./FASTQ/
 fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR1339465 -O ./FASTQ/SRR1339465/
 
-prefetch SRR1343572 -O ./FASTQ/
-fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR1343572 -O ./FASTQ/SRR1343572/
+#ERROR!!
+# prefetch SRR1343572 -O ./FASTQ/
+# fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR1343572 -O ./FASTQ/SRR1343572/
 
 prefetch SRR1339474 -O ./FASTQ/
 fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR1339474 -O ./FASTQ/SRR1339474/
@@ -66,8 +67,9 @@ fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR1339482 -O ./
 prefetch SRR1339487 -O ./FASTQ/
 fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR1339487 -O ./FASTQ/SRR1339487/
 
-prefetch SRR1343576 -O ./FASTQ/
-fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR1343576 -O ./FASTQ/SRR1343576/
+#ERROR!!
+# prefetch SRR1343576 -O ./FASTQ/
+# fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR1343576 -O ./FASTQ/SRR1343576/
 
 prefetch SRR350719 -O ./FASTQ/
 fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR350719 -O ./FASTQ/SRR350719/
@@ -126,6 +128,8 @@ fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR10913932 -O .
 prefetch SRR10913933 -O ./FASTQ/
 fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR10913933 -O ./FASTQ/SRR10913933/
 
+#NEED TO TEST FROM HERE OVERNIGHT:
+
 prefetch SRR8080088 -O ./FASTQ/
 fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR8080088 -O ./FASTQ/SRR8080088/
 
@@ -176,6 +180,7 @@ fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR5822141 -O ./
 
 prefetch SRR5822140 -O ./FASTQ/
 fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR5822140 -O ./FASTQ/SRR5822140/
+
 
 # Extra Accessions: 
 # CNP0001541

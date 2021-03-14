@@ -12,5 +12,4 @@ if [ `uname` == "Darwin" ]; then
 elif [ `uname` == "Linux" ]; then
 	salmon index -t ./${filename} -i ./${filename}_index
 fi
-rm $filename
 cd ..
