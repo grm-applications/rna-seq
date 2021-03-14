@@ -3,7 +3,7 @@
 
 prefetch --option-file ./config/single_accessions.txt -O ./FASTQ/
 cd FASTQ
-for dir in */;do
+for dir in *;do
 	cd $dir
 		fastq-dump --defline-seq '@$sn[_$rn]/$ri' $dir -O ./
 		rm -rf ${dir}.sra
@@ -13,7 +13,7 @@ cd ..
 
 prefetch --option-file ./config/paired_accessions.txt -O ./FASTQ/
 cd FASTQ
-for dir in */;do
+for dir in *;do
 	cd $dir
 		fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files $dir -O ./
 		rm -rf ${dir}.sra
