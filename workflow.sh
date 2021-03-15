@@ -8,8 +8,8 @@
 
 # ./modules/SRA/sra_accessions.sh
 # ./modules/FastQC/fastqc_run.sh
-./modules/MultiQC/multiqc_install.sh
-# ./modules/MultiQC/multiqc_run.sh
+# ./modules/MultiQC/multiqc_install.sh
+./modules/MultiQC/multiqc_run.sh
 # ./modules/Trinity/trinity_run.sh
 
 
