@@ -1,4 +1,5 @@
 
+module load igmm/apps/salmon/1.3.0
 
 cd Reference
 filename=""
@@ -13,3 +14,5 @@ elif [ `uname` == "Linux" ]; then
 	salmon index -t ./${filename} -i ./${filename}_index
 fi
 cd ..
+
+module unload igmm/apps/salmon/1.3.0

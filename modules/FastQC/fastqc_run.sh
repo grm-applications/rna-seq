@@ -1,4 +1,6 @@
 
+module load igmm/apps/FastQC/0.11.9
+
 mkdir 'Quality Control'
 cd FASTQ
 for dir in *
@@ -15,3 +17,5 @@ do
 	cd ..
 done
 cd ..
+
+module unload igmm/apps/FastQC/0.11.9

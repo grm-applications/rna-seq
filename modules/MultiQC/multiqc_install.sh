@@ -1,4 +1,6 @@
 
+module load python
+
 cd modules
 cd MultiQC
 git clone https://github.com/ewels/MultiQC.git
@@ -7,3 +9,5 @@ pip install .
 cd ..
 cd ..
 cd ..
+
+module unload python

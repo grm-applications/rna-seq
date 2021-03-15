@@ -1,4 +1,6 @@
 
+module load igmm/apps/sratoolkit/2.10.8
+
 # Single-end Accessions:
 
 # prefetch ERR019888 -O ./FASTQ/
@@ -189,3 +191,5 @@ fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR5822140 -O ./
 # GPL13413
 # GSM706713
 # GSM706714
+
+module unload igmm/apps/sratoolkit/2.10.8

@@ -1,4 +1,6 @@
 
+module load igmm/apps/salmon/1.3.0
+
 cd Reference
 filename=""
 for folder in */;
@@ -20,5 +22,4 @@ do
 done
 cd ..
 
-
-
+module unload igmm/apps/salmon/1.3.0
