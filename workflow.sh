@@ -14,8 +14,9 @@ module load roslin/blast+/2.11.0
 # module load igmm/apps/HISAT2/2.1.0
 # module load igmm/apps/Trinity/2.8.3
 
-./modules/SRA/sra_accessions.sh
+# ./modules/SRA/sra_accessions.sh
 # ./modules/FastQC/fastqc_run.sh
+./modules/MultiQC/multiqc_run.py
 # python ./modules/Python/trinity_sample_file.py
 # ./modules/Trinity/trinity_rearrange_files.sh
 # ./modules/Trinity/trinity_run.sh

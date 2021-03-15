@@ -138,28 +138,28 @@
 # prefetch SRR8080087 -O ./FASTQ/
 # fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR8080087 -O ./FASTQ/SRR8080087/
 
+# prefetch SRR8080086 -O ./FASTQ/
+# fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR8080086 -O ./FASTQ/SRR8080086/
+
+# prefetch SRR8080085 -O ./FASTQ/
+# fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR8080085 -O ./FASTQ/SRR8080085/
+
+# prefetch SRR8080084 -O ./FASTQ/
+# fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR8080084 -O ./FASTQ/SRR8080084/
+
+# prefetch SRR8080083 -O ./FASTQ/
+# fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR8080083 -O ./FASTQ/SRR8080083/
+
+# prefetch SRR8080082 -O ./FASTQ/
+# fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR8080082 -O ./FASTQ/SRR8080082/
+
+# prefetch SRR8080081 -O ./FASTQ/
+# fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR8080081 -O ./FASTQ/SRR8080081/
+
+# prefetch SRR8080080 -O ./FASTQ/
+# fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR8080080 -O ./FASTQ/SRR8080080/
+
 #NEED TO TEST FROM HERE OVERNIGHT:
-
-prefetch SRR8080086 -O ./FASTQ/
-fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR8080086 -O ./FASTQ/SRR8080086/
-
-prefetch SRR8080085 -O ./FASTQ/
-fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR8080085 -O ./FASTQ/SRR8080085/
-
-prefetch SRR8080084 -O ./FASTQ/
-fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR8080084 -O ./FASTQ/SRR8080084/
-
-prefetch SRR8080083 -O ./FASTQ/
-fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR8080083 -O ./FASTQ/SRR8080083/
-
-prefetch SRR8080082 -O ./FASTQ/
-fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR8080082 -O ./FASTQ/SRR8080082/
-
-prefetch SRR8080081 -O ./FASTQ/
-fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR8080081 -O ./FASTQ/SRR8080081/
-
-prefetch SRR8080080 -O ./FASTQ/
-fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR8080080 -O ./FASTQ/SRR8080080/
 
 prefetch SRR8648837 -O ./FASTQ/
 fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files ./FASTQ/SRR8648837 -O ./FASTQ/SRR8648837/
