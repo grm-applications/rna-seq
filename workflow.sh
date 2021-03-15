@@ -16,7 +16,7 @@ module load roslin/blast+/2.11.0
 
 # ./modules/SRA/sra_accessions.sh
 # ./modules/FastQC/fastqc_run.sh
-./modules/MultiQC/multiqc_run.py
+./modules/MultiQC/multiqc_run.sh
 # python ./modules/Python/trinity_sample_file.py
 # ./modules/Trinity/trinity_rearrange_files.sh
 # ./modules/Trinity/trinity_run.sh
