@@ -9,9 +9,9 @@ do
 	for file in *.fastq
 	do
 		if [ `uname` == "Darwin" ]; then
-			../../modules/FastQC/FastQC/fastqc -o ../../'Quality Control' $file
+			../../modules/FastQC/FastQC/fastqc -o ../../'FastQC' $file
 		elif [ `uname` == "Linux" ]; then
-			fastqc -o ../../'Quality Control' $file
+			fastqc -o ../../'FastQC' $file
 		fi
 	done
 	cd ..
