@@ -1,7 +1,9 @@
 
 module load roslin/python/3.8.1
 
-pip install multiqc
-multiqc ./'Quality Control'
+git clone https://github.com/ewels/MultiQC.git
+cd MultiQC
+pip install .
+cd ..
 
 module unload roslin/python/3.8.1
