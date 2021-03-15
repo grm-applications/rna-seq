@@ -6,11 +6,11 @@
 
 . /etc/profile.d/modules.sh
 module load R
-# module load igmm/apps/salmon/1.3.0
+module load igmm/apps/salmon/1.3.0
 module load igmm/apps/python/2.7.10
 module load igmm/apps/sratoolkit/2.10.8
 module load roslin/blast+/2.11.0
-module load igmm/apps/FastQC/0.11.9
+# module load igmm/apps/FastQC/0.11.9
 # module load igmm/apps/HISAT2/2.1.0
 # module load igmm/apps/Trinity/2.8.3
 
