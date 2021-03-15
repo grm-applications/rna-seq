@@ -1,4 +1,7 @@
 
-module load python
-python ./modules/Python/multiqc_run.py
-module unload python
+module load roslin/python/3.8.1
+
+pip install multiqc
+multiqc ./'Quality Control'
+
+module unload roslin/python/3.8.1
